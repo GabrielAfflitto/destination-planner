@@ -14,6 +14,8 @@ gem 'sass-rails', '>= 3.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'pry'
+  gem 'launchy'
 end
 
 group :development do
