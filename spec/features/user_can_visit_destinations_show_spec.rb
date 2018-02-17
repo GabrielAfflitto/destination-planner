@@ -22,7 +22,7 @@ describe "user can visit destinations show page" do
       expect(page).to have_content(dest1.name)
       expect(page).to have_content(dest1.zip)
       expect(page).to have_content(dest1.description)
-      expect(page).to have_content(dest1.forecast)
+      expect(dest1.forecast.count).to eq(10)
     end
   end
 end
