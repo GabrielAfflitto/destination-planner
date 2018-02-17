@@ -16,6 +16,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry'
   gem 'launchy'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :development do
