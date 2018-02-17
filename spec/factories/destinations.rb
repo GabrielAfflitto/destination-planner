@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :destination do
-    sequence(:name) {|n| "destination #{n}" }
+    name "dog"
     zip "80219"
     description "some random description"
-    image "image.jpg"
+    image_url File.open("./spec/support/images/test_image.jpg")
   end
 end

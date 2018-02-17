@@ -4,11 +4,13 @@ require 'rails_helper'
 describe "user can visit destinations show page" do
   context "when a user visits a specific destination page" do
     it "they should see information regarding each destination" do
-      visit root_path
       dest1 = create(:destination)
-      dest2, dest3 = create_list(:destination, 3)
+      dest2, dest3 = create_list(:destination, 2)
+      visit root_path
+
       within ".destinations" do
         # save_and_open_page
+        expect(page).to have_content(dest1.name)
         expect(page).to have_content("View")
       end
 
