@@ -23,6 +23,11 @@ describe "user can visit destinations show page" do
       expect(page).to have_content(dest1.zip)
       expect(page).to have_content(dest1.description)
       expect(dest1.forecast.count).to eq(10)
+      expect(page).to have_content(dest1.forecast.first.date)
+      expect(page).to have_content(dest1.forecast.first.high)
+      expect(page).to have_content(dest1.forecast.first.condition)
+      expect(page).to have_content(dest1.forecast.first.weekday)
+      expect(page).to have_content(dest1.forecast.first.low)
     end
   end
 end

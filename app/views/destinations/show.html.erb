@@ -20,8 +20,9 @@
   <div class="row">
     <h4>Forecast for <%= @destination.name %>:</h4>
     <% @destination.forecast.each do |day| %>
+    <p>Weekday: <%= day.weekday %> </p>
     <p>Date: <%= day.date %></p>
-    <p>high: <%= day.high %> fahrenheit</p>
+    <p>High: <%= day.high %> fahrenheit</p>
     <p>Low: <%= day.low %> fahrenheit</p>
     <p>Condition:<%= day.condition %></p>
     <% end %>
