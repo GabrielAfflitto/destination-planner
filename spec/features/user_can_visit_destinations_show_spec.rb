@@ -5,7 +5,8 @@ describe "user can visit destinations show page" do
   context "when a user visits a specific destination page" do
     it "they should see information regarding each destination" do
       visit root_path
-      dest1, dest2, dest3 = create_list(:destination, 3)
+      dest1 = create(:destination)
+      dest2, dest3 = create_list(:destination, 3)
       within ".destinations" do
         # save_and_open_page
         expect(page).to have_content("View")
