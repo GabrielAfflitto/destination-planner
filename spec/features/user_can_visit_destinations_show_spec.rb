@@ -9,19 +9,18 @@ describe "user can visit destinations show page" do
       visit root_path
 
       within ".destinations" do
-        # save_and_open_page
         expect(page).to have_content(dest1.name)
-        expect(page).to have_content("View")
+        expect(page).to have_content("Show")
       end
 
       within(first(".destination")) do
-        click_on "See more details"
+        click_on "Show"
       end
 
       expect(current_path).to eq(destination_path(dest1))
-
+      # save_and_open_page
       expect(page).to have_content(dest1.name)
-      expect(page).to have_content(dest1.zipcode)
+      expect(page).to have_content(dest1.zip)
       expect(page).to have_content(dest1.description)
       expect(page).to have_content(dest1.forecast)
     end
