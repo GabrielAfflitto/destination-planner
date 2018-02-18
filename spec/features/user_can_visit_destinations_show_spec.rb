@@ -16,7 +16,7 @@ describe "user can visit destinations show page" do
       within(first(".destination")) do
         click_on "Show"
       end
-
+      
       expect(current_path).to eq(destination_path(dest1))
       # save_and_open_page
       expect(page).to have_content(dest1.name)
